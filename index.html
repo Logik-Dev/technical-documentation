@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div id="page-wrapper">
+        <nav id="navbar">
+            <header class="navbar-header">
+                <h1>Documentation CSS</h1>
+            </header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#Syntax" class="nav-link">Syntax</a></li>
+                <li><a href="#Sélecteurs" class="nav-link">Sélecteurs</a></li>
+                <li><a href="#Combinateurs" class="nav-link">Combinateurs</a></li>
+                <li><a href="#Pseudo-Classes" class="nav-link">Pseudo-Classes</a></li>
+                <li><a href="#Pseudo-Elements" class="nav-link">Pseudo-Elements</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header class="section-header">
+                    <h1>Introduction</h1>
+                </header>
+                <p>
+                    <strong>CSS</strong> est un language de programmation qui n'est jamais cité seul et que on l'associé généralement à <strong>HTML</strong>, et pour cause il n'a pas d'utilité sans ce dernier.En effet <strong>CSS</strong> sert à styliser les pages web écrites en <strong>HTML</strong>, avec <strong>CSS</strong> on peut par exemple:
+                </p>
+                <ul>
+                    <li>Changer la police d'un texte.</li>
+                    <li>Changer la couleur de fond d'un élément.</li>
+                    <li>Modifier la hauteur ou la largeur d'un élément.</li>
+                    <li>Créer des animations, etc...</li>
+                </ul>               
+                <p>
+                    Mais on peut encore faire tellement d'autre choses avec <strong>CSS</strong> 
+                    qu'en faire une liste serait bien trop long et rébarbatif, mais c'est un language très facile d'accès et le seul requis est de connaître <strong>HTML</strong>. 
+                </p>
+            </section>
+            <section class="main-section" id="Syntax">
+                <header class="section-header">
+                    <h1>Syntax</h1>
+                </header>
+                <p>
+                    La syntaxe de <strong>CSS</strong> est très simple.Voici par exemple comment séléctionner une balise titre <strong>&lth1&gt</strong> et changer sa couleur en rouge:
+                </p>
+                <code>
+                    <pre class="prettyprint lang-css">
+h1 { color: #f00; } 
+                    </pre>
+                </code>
+                <p>
+                    Comme on modifie généralement plus d'une propriété on aura plutôt tendance à utiliser la notation sur plusieurs lignes:
+                </p>
+                <code>
+                    <pre class="prettyprint lang-css">
+h1{
+    color: #f00;
+    font-size: 20px;
+}
+                    </pre>
+                </code>
+                <p class="anotation">
+                    Içi on a simplement modifier la couleur de tout les titres <strong>&lth1&gt</strong> en rouge ainsi que la taille de leur police à 20 pixels.
+                </p> 
+            </section>
+            <section class="main-section" id="Sélecteurs">
+                <header class="section-header">
+                    <h1>Sélecteurs</h1>
+                </header>
+                <p>
+                    Un sélecteur peut être de différent type:
+                </p>
+                    <ul>
+                        <li>Le nom d'une balise.</li>
+                        <li>Le nom d'une classe avec un point le précédent.</li>
+                        <li>Le nom d'un id avec un dièse le précédent.</li>
+                    </ul>
+                <p>
+                    Par exemple pour changer la couleur de fond de mon élément qui à la classe <em>bg-red</em> il me suffit d'ajouter un point devant le nom de la classe:
+                </p>
+                <code>
+                    <pre class="prettyprint lang-css">
+.bg-red{
+    background-color: #f00;
+}
+                    </pre>
+                </code>
+            </section>
+            <section class="main-section" id="Combinateurs">
+                <header class="section-header">
+                    <h1>Combinateurs</h1>
+                </header>
+                <p>
+                    On peut combiner de différentes façon les sélecteurs pour pouvoir sélectionner plus finement nos éléments.Le symbole <b>+</b> permet de selectionner le prochain élément qui a le même parent: 
+                </p>
+                <code>
+                    <pre class="prettyprint lang-css">
+h1 + p{
+    font-size: 15px;
+}
+                    </pre>
+                </code>
+                <p class="anotation">
+                    Içi on sélectionne tout les premiers paragraphes situés juste après une balise <b>&lth1&gt</b>.
+                </p>
+                <p>
+                    Le symbole <b>&gt</b> permet lui de selectionner les enfants d'un élément, par exemple on peut sélectionner tout les liens contenus dans un paragraphe et modifier leur affichage par défaut:
+                </p>
+                <code>
+                    <pre class="prettyprint lang-css">
+p > a{
+    text-decoration: none;
+    color: inherit;
+}
+                    </pre>
+                </code>
+            </section>
+            <section class="main-section" id="Pseudo-Classes">
+                <header class="section-header">
+                    <h1>Pseudo-Classes</h1>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam delectus beatae cupiditate rem dolore sequi quas iste maxime? Optio, ipsam?</p>
+            </section>
+            <section class="main-section" id="Pseudo-Elements">
+                <header class="section-header">
+                    <h1>Pseudo-Elements</h1>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sit iure culpa ut. Perferendis nobis maiores expedita voluptatibus veniam harum dignissimos at odio numquam, aliquam ipsum dicta neque magnam perspiciatis ducimus qui magni quasi sint aliquid aspernatur deleniti minima? Aspernatur sint dolorum magni inventore molestias saepe veritatis tenetur iusto illo itaque possimus cumque, laudantium ut, officia ea voluptas quibusdam ipsam voluptates quaerat quae ad deleniti non! Perferendis maiores non dicta soluta quibusdam. Quia hic nisi corrupti consequatur quasi eligendi voluptate, nihil exercitationem saepe, soluta sed quod, quo deleniti porro omnis. Sed delectus rerum velit quaerat minima sequi odit blanditiis cumque?</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

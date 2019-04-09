@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Proza+Libre');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1,h2,h3{
+    font-family: "Proza Libre", 'Times New Roman', Times, serif;
+    text-align: center;
+}
+ul{
+    margin-left: 3rem ;
+    margin-top: .5rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+code{
+    margin-left: 2rem;
+
+}
+pre {
+    border: none !important;
+    background-color: #eee;
+    margin-left: 2rem;
+    padding: .8rem 0 0 .8rem !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+}
+#page-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    "nav"
+    "main"
+}
+#navbar{
+    grid-area: nav;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #8d99ae;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+}
+.navbar-header{
+    background-color: #2b2d42;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+#navbar ul{
+    margin-left: 0;
+    color: #fff;
+}
+#navbar li{
+    list-style: none;
+    border-bottom: 1px #fff solid;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+#navbar ul li:last-child{
+    border-bottom: none;
+}
+#main-doc{
+    grid-area: main;
+    background-color: #fff;
+    padding: 0 2rem;
+}
+.main-section{
+    margin-top: 2rem;
+}
+.section-header{
+    font-size: 2rem;
+}
+.main-section p{
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+}
+.main-section ul{
+    font-size: 1.2rem;
+}
+.main-section .anotation{
+    margin-top: -2rem;
+    margin-left: .9rem;
+    font-size: 1rem;
+}
+@media screen and (min-width: 815px){
+    #page-wrapper{
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 1fr ;
+        grid-column-gap: .3rem;
+        grid-template-areas:
+        "nav main"
+    }
+    #navbar{
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, .3);
+    }
+    #navbar ul{
+        text-align: left;
+    }
+    #navbar ul li:last-child{
+        border-bottom: 1px #fff solid;
+    }
+}
